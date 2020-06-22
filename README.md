@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+CRUD Action
+
+1. forms to add movies and rate moveis
+2. each of the movies created will be stored to a session
+
+need to create routes - see canvas!

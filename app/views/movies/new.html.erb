@@ -1,0 +1,23 @@
+<h1> Add a new movie </h1>
+
+
+
+<%# action - where should it go /redirect to after submit
+method - what action should it perform - get put delete %>
+
+<%# this will take you to create method
+- NEVER HARDCODE URL! use the prefix! %>
+
+<form action="<%=movies_path%>" method="POST">
+<input type= "hidden" value="<%=form_authenticity_token%>" name="authenticity_token">
+<%# token visible in inspect tools -its unique and changes with each refresh %>
+
+<label>title </label>
+  <input type="text" name="movie[:title]" >
+  <label>rating </label>
+  <input type="number" name="movie[:rating]" min="1" max="10">
+  <%# apparently also allowed when not a string or a symbol, ie just rating 
+  - name doesnt matter it is just whatever value you put in the form - its not ruby - would error if erb %>
+  <input type ="submit" value="Create">
+
+</form>
